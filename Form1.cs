@@ -45,5 +45,21 @@ namespace WindowsFormsApp1
             textMessage.Clear();
 
         }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            int index = dataGridView1.CurrentCell.RowIndex;
+
+            if (index > - 1)
+            {
+                textTitle.Text = table.Rows[index].ItemArray[0].ToString();
+                textMessage.Text = table.Rows[index].ItemArray[1].ToString();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
