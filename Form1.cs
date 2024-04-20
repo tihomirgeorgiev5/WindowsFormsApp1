@@ -22,9 +22,11 @@ namespace WindowsFormsApp1
         {
             table = new DataTable();
             table.Columns.Add("Title", typeof(string));
-            table.Columns.Add("Messagés", typeof(string));
+            table.Columns.Add("Messages", typeof(string));
 
-            dataGridView1.DataSource = table; 
+            dataGridView1.DataSource = table;
+            dataGridView1.Columns["Messages"].Visible = false;
+            dataGridView1.Columns["Title"].Width = 220;
         }
 
         private void btnNew_Click(object sender, EventArgs e)
