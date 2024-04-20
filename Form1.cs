@@ -59,7 +59,9 @@ namespace WindowsFormsApp1
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            int index = dataGridView1.CurrentCell.RowIndex;
 
+            table.Rows[index].Delete();
         }
     }
 }
