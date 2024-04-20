@@ -29,6 +29,20 @@ namespace WindowsFormsApp1
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            textTitle.Clear();
+            textMessage.Clear();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            table.Rows.Add(textTitle.Text, textMessage.Text);
+            textTitle.Clear();
+            textMessage.Clear();
 
         }
     }
